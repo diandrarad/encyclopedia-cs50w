@@ -1,1 +1,22 @@
+{% extends "encyclopedia/layout.html" %}
 
+{% block title %}
+    Edit Page - {{ title }}
+{% endblock %}
+
+{% block body %}
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Edit Page - {{ title }}</h1>
+    </div>
+    <div class="row ms-2">
+        <div class="list-group col-sm-9">
+            <form action="{% url 'edit_page' title %}" method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <textarea class="form-control mb-3" name="content" rows="15">{{ content }}</textarea>
+                    <button type="submit" class="btn btn-primary mx-auto">Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}
