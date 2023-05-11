@@ -25,7 +25,7 @@ The project is built using the Django framework, Python programming language, an
 
 ## How to Use
 - Clone the project from Github
-Install the requirements using pip
+- Install the requirements using pip
 - Run the server using python manage.py runserver
 - Access the web application on a browser at http://localhost:8000/
 
